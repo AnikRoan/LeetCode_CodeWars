@@ -47,17 +47,40 @@ public class KataTest {
 
     @Test
     public void exampleTest1() {
-        assertArrayEquals(new int[]{ 1, 3, 2, 8, 5, 4 }, Kata.sortArray(new int[]{ 5, 3, 2, 8, 1, 4 }));
+        assertArrayEquals(new int[]{ 1, 3, 2, 8, 5, 4 }, Kata.sortArrayses(new int[]{ 5, 3, 2, 8, 1, 4 }));
     }
 
     @Test
     public void exampleTest2() {
-        assertArrayEquals(new int[]{ 1, 3, 5, 8, 0 }, Kata.sortArray(new int[]{ 5, 3, 1, 8, 0 }));
+        assertArrayEquals(new int[]{ 1, 3, 5, 8, 0 }, Kata.sortArrayses(new int[]{ 5, 3, 1, 8, 0 }));
     }
 
     @Test
     public void exampleTest3() {
-        assertArrayEquals(new int[]{}, Kata.sortArray(new int[]{}));
+        assertArrayEquals(new int[]{}, Kata.sortArrayses(new int[]{}));
+    }
+
+
+
+
+    @Test
+    public void testFixed() {
+        assertEquals("S.H", Kata.abbrevName("Sam Harris"));
+        assertEquals("P.F", Kata.abbrevName("Patrick Feenan"));
+        assertEquals("E.C", Kata.abbrevName("Evan Cole"));
+        assertEquals("P.F", Kata.abbrevName("P Favuzzi"));
+        assertEquals("D.M", Kata.abbrevName("David Mendieta"));
+    }
+
+
+
+    @Test
+    public void simpleArray1() {
+        assertEquals(2, getActualFor(1, 1, 2));
+    }
+
+    private int getActualFor(int... numbers) {
+        return Kata.stray(numbers);
     }
 
 
