@@ -7,6 +7,11 @@ public class FunctionalStyle {
     public static void main(String[] args) {
         Object[] words = {" ", '3', null, "2", 1, ""};
         Arrays.stream(words)
+//                .map(String::valueOf)
+//                .filter(c->c.matches("^\\d+S"))
+//                .mapToInt(Integer::parseInt)
+//                .sorted()
+//                .forEach(System.out::println);
                 .filter(Objects::nonNull)
                 .map(Objects::toString)
                 .map(String::trim)
