@@ -1,4 +1,4 @@
-package com.roananik.GOFpatterns.bilder2;
+package com.roananik.GOFpatterns.bilder2badExampl;
 
 public class Director {
     WebSiteBuilder builder;
