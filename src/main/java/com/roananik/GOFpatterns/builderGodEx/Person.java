@@ -36,36 +36,41 @@ public class Person {
     }
 }
 
-//interface AbstractPerson {
-//    AbstractPerson setName(String name);
-//    AbstractPerson setCountry(String country);
-//    AbstractPerson setAge(int age);
-//    AbstractPerson setSalary(int salary);
-//    Person build();
-//}
-class PersonBuilder {
-    Person person=new Person();
+interface AbstractPerson {
+    AbstractPerson name(String name);
+
+    AbstractPerson country(String country);
+
+    AbstractPerson age(int age);
+
+    AbstractPerson salary(int salary);
+
+    Person build();
+}
+
+class PersonBuilder implements AbstractPerson {
+    Person person = new Person();
 
 
-    public PersonBuilder setName(String name) {
+    public AbstractPerson name(String name) {
         this.person.setName(name);
         return this;
     }
 
 
-    public PersonBuilder setCountry(String country) {
+    public AbstractPerson country(String country) {
         this.person.setCountry(country);
         return this;
     }
 
 
-    public PersonBuilder setAge(int age) {
+    public AbstractPerson age(int age) {
         this.person.setAge(age);
         return this;
     }
 
 
-    public PersonBuilder setSalary(int salary) {
+    public AbstractPerson salary(int salary) {
         this.person.setSalary(salary);
         return this;
     }
