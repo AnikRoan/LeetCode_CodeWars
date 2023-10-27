@@ -1,9 +1,6 @@
 package com.roananik.exersise7;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -93,6 +90,18 @@ public class Kata {
     }
 
     public int minimizedStringLength(String s) {
+//   List<Character>list = new ArrayList<>();
+//   for(int i=0;i<s.length();i++){
+//       list.add(s.charAt(i));
+//   }
+//   return (int) list.stream().distinct().count();
+
+        Set<Character>set = new HashSet<>();
+        for(int i=0;i<s.length();i++){
+            set.add(s.charAt(i));
+        }
+        return set.size();
+
 
 
 
